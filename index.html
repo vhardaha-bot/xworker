@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Worker ⚒️ - आपका लोकल काम-नेटवर्क</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #25D366; /* WhatsApp Green */
+            --dark-bg: #0d0e12;
+            --card-bg: rgba(30, 32, 42, 0.6);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-light: #f3f4f6;
+            --text-gray: #9ca3af;
+            --accent-gold: #ffcc00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Tiro Devanagari Hindi', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 60px;
+            background-image: radial-gradient(circle at 50% 0%, #1a2e22 0%, #0d0e12 50%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Branding Header */
+        header {
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+            text-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Hero Container */
+        .hero {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            margin-bottom: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            font-weight: 700;
+        }
+
+        .hero p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Premium WhatsApp CTA Button */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: #050505;
+            text-decoration: none;
+            padding: 18px 40px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            margin-bottom: 25px;
+        }
+
+        .btn-whatsapp i {
+            margin-right: 12px;
+            font-size: 1.5rem;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+            background-color: #20bc57;
+        }
+
+        /* QR Automation */
+        .qr-wrapper {
+            margin-top: 15px;
+        }
+
+        .qr-box {
+            background: #ffffff;
+            padding: 12px;
+            display: inline-block;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .qr-box img {
+            display: block;
+        }
+
+        .qr-hint {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-top: 10px;
+        }
+
+        /* Feature Pillars */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: border 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(37, 211, 102, 0.3);
+        }
+
+        .feature-card i {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .feature-card p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            line-height: 1.4;
+        }
+
+        /* Process Timeline */
+        .process-box {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 35px 30px;
+            margin-bottom: 35px;
+            border: 1px solid var(--border-color);
+        }
+
+        .process-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--accent-gold);
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-badge {
+            background-color: rgba(37, 211, 102, 0.15);
+            color: var(--primary-color);
+            width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 20px;
+            flex-shrink: 0;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+        }
+
+        .step-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            color: var(--text-light);
+        }
+
+        .step-details p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+
+        /* Modern Document Blocks */
+        .doc-panel {
+            background-color: rgba(20, 22, 28, 0.7);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .doc-panel h3 {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .doc-panel h3 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .doc-panel p, .doc-panel ul {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .doc-panel ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .doc-panel ul li {
+            margin-bottom: 6px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.85rem;
+            color: #4b5563;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 20px;
+        }
+
+        /* Responsive Layouts */
+        @media (max-width: 650px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .logo {
+                font-size: 2.2rem;
+            }
+            .hero {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="logo">X WORKER <span>⚒️</span></div>
+            <div class="tagline">आपका अपना लोकल काम-नेटवर्क</div>
+        </header>
+
+        <section class="hero">
+            <h1>हुनर आपके पास है, मौके यहाँ हैं!</h1>
+            <p>बिना किसी फ़ीस या बिचौलियों के अपने क्षेत्र में सीधे काम ढूँढें या कारीगरों से संपर्क करें। सब कुछ सीधे आपके व्हाट्सऐप पर सुरक्षित रूप से उपलब्ध।</p>
+            
+            <a href="https://wa.me/919575859395?text=Hi" target="_blank" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> व्हाट्सऐप पर शुरू करें (भेजें 'Hi')
+            </a>
+
+            <div class="qr-wrapper">
+                <div class="qr-box">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fwa.me%2F919575859395%3Ftext%3DHi" alt="X Worker Network Code" width="180" height="180">
+                </div>
+                <div class="qr-hint">डेस्कटॉप यूजर सीधे अपने फोन कैमरा से स्कैन करें</div>
+            </div>
+        </section>
+
+        <section class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-halved"></i>
+                <h3>नंबर सुरक्षित</h3>
+                <p>आपकी स्पष्ट 'हाँ' के बिना सामने वाले को आपका नंबर कभी नहीं दिखता।</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-hand-holding-dollar"></i>
+                <h3>100% फ्री</h3>
+                <p>कोई छुपा हुआ कमीशन नहीं, कोई वीआईपी चार्ज नहीं। यह हमेशा फ्री है।</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-map-location-dot"></i>
+                <h3>लोकल मैचिंग</h3>
+                <p>आपके ब्लॉक और कस्बे से दूरी के हिसाब से सबसे सटीक लोकल काम।</p>
+            </div>
+        </section>
+
+        <section class="process-box">
+            <h2>यह कैसे काम करता है?</h2>
+            
+            <div class="process-step">
+                <div class="step-badge">1</div>
+                <div class="step-details">
+                    <h4>व्हाट्सऐप पर मैसेज करें</h4>
+                    <p>ऊपर दिए गए बटन या कोड के ज़रिए हमारे नंबर (+91 95758 59395) पर बस एक 'Hi' भेजें।</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-badge">2</div>
+                <div class="step-details">
+                    <h4>लोकेशन और काम चुनें</h4>
+                    <p>चैटबॉट में आने वाले बटनों का उपयोग करके अपना ब्लॉक, कस्बे से दूरी और अपना हुनर/ज़रूरत चुनें।</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-badge">3</div>
+                <div class="step-details">
+                    <h4>सहमति और सीधी बात</h4>
+                    <p>मैच मिलते ही सिस्टम दोनों से अनुमति मांगेगा। दोनों पक्षों की 'हाँ' होते ही नंबर साझा हो जाएगा, जिसके बाद आप सीधी बात कर सकते हैं।</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="doc-panel">
+            <h3><i class="fas fa-user-lock"></i> गोपनीयता नीति (Privacy Policy)</h3>
+            <p>X Worker नेटवर्क अपने सभी उपयोगकर्ताओं की प्राइवेसी और डेटा सुरक्षा का पूरा ध्यान रखता है:</p>
+            <ul>
+                <li>सिस्टम केवल आपका नाम, नंबर, ब्लॉक और काम की कैटेगरी को मैचिंग एल्गोरिदम के लिए सुरक्षित डेटाबेस में रखता है।</li>
+                <li>आपका मोबाइल नंबर किसी भी तीसरे पक्ष या अन्य यूज़र को तब तक नहीं दिखाया जाता जब तक आप किसी विशिष्ट काम के लिए चैट पर सहमति नहीं देते।</li>
+                <li>हम कभी भी आपके नंबर का उपयोग किसी भी प्रकार के स्पैम मैसेज या विज्ञापन के लिए नहीं करते हैं।</li>
+            </ul>
+        </section>
+
+        <section class="doc-panel">
+            <h3><i class="fas fa-scale-balanced"></i> कानूनी अस्वीकरण (Disclaimer)</h3>
+            <p>X Worker एक पूर्णतः स्वचालित तकनीकी नेटवर्क है जो स्थानीय कामगारों और ग्राहकों को जोड़ने का माध्यम प्रदान करता है। उपयोग करने से पहले निम्नलिखित बातों को समझें:</p>
+            <ul>
+                <li><strong>लेन-देन और विवाद:</strong> काम की गुणवत्ता, पैसों का भुगतान, या काम के दौरान होने वाले किसी भी प्रकार के नुकसान, दुर्घटना या आपसी विवाद के लिए X Worker नेटवर्क या इसके डेवलपर ज़िम्मेदार नहीं होंगे। यूज़र्स स्वयं अपनी सुरक्षा और संतुष्टि की जाँच कर लें।</li>
+                <li><strong>आयु प्रतिबंध:</strong> इस स्वचालित सेवा का उपयोग करने के लिए उपयोगकर्ता की आयु 18 वर्ष या उससे अधिक होनी अनिवार्य है।</li>
+            </ul>
+        </section>
+
+        <footer>
+            &copy; 2026 X WORKER NETWORK | पंजीकृत स्वतंत्र स्थानीय रोजगार सेवा।<br>
+            स्थानीय कामगारों की सहायता और आत्मनिर्भर भारत के विज़न को समर्पित।
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
