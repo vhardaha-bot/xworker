@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'RZ70BC6S32);
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X Worker - मंडला काम-नेटवर्क</title>
+
+    <meta property="og:title" content="X Worker - मंडला का अपना लोकल काम-नेटवर्क">
+    <meta property="og:description" content="काम चाहिए या कारीगर? सीधे WhatsApp पर संपर्क करें। 100% फ्री सेवा।">
+    <meta property="og:image" content="314820.png"> <meta property="og:url" content="https://xworker.vhoriginal.com">
+    <meta property="og:type" content="website">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,7 +27,6 @@
             --card-bg: #FFFFFF;
             --text-dark: #1C1E21;
             --text-gray: #65676B;
-            --accent-yellow: #FFD500;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -44,7 +57,6 @@
             gap: 10px;
         }
 
-        /* LOGO STYLING HERE */
         .brand img {
             width: 45px;
             height: 45px;
@@ -148,7 +160,6 @@
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* --- Stickers/Badges --- */
         .sticker-row {
             display: flex;
             justify-content: center;
@@ -170,7 +181,7 @@
             gap: 5px;
         }
 
-        /* --- How it Works (Visual Steps) --- */
+        /* --- How it Works --- */
         .section-container {
             max-width: 500px;
             margin: 20px auto;
@@ -219,7 +230,7 @@
             color: var(--text-gray);
         }
 
-        /* --- Services Grid (Sticker Style) --- */
+        /* --- Services Grid --- */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -235,17 +246,42 @@
             border: 1px solid #E4E6EB;
         }
 
-        .service-box .emoji {
-            font-size: 2rem;
-            margin-bottom: 5px;
-            display: block;
+        .service-box .emoji { font-size: 2rem; margin-bottom: 5px; display: block; }
+        .service-box span { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); }
+
+        /* --- QR Code Display --- */
+        .qr-section {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 220px;
+            margin: 25px auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #E4E6EB;
         }
 
-        .service-box span {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-dark);
+        .qr-section img { display: block; margin: 0 auto; width: 160px; height: 160px; }
+        .qr-section p { font-size: 0.75rem; color: var(--text-gray); margin-top: 8px; font-weight: 600; }
+
+        /* --- Fine Print Legal Area (बारीक अक्षर) --- */
+        .fine-print-container {
+            max-width: 500px;
+            margin: 30px auto 10px auto;
+            padding: 0 20px;
+            text-align: center;
+            border-top: 1px solid #E4E6EB;
+            padding-top: 15px;
         }
+
+        .fine-print {
+            font-size: 0.72rem; /* Extremely small and neat */
+            color: #8A8D91;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .fine-print strong { color: #65676B; }
 
     </style>
 </head>
@@ -274,17 +310,13 @@
 
         <div class="contact-box">
             <div class="big-number-title">हमारा WhatsApp नंबर</div>
-            <div class="big-number">
-                📱 95758 59395
-            </div>
+            <div class="big-number">📱 95758 59395</div>
             
             <a href="https://wa.me/919575859395?text=Hi" class="wa-btn">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" width="28">
                 यहाँ दबाएं और "Hi" भेजें
             </a>
         </div>
-        
-        <p style="font-size: 0.8rem; color: #888; margin-top: -5px;">🙏 कृपया इस सर्विस को जरूरतमंदों तक पहुँचाएँ</p>
     </div>
 
     <div class="section-container">
@@ -315,44 +347,32 @@
         </div>
     </div>
 
-    <div class="section-container" style="margin-bottom: 40px;">
+    <div class="section-container">
         <h2 class="section-title">🛠️ यहाँ कौन से काम मिलते हैं?</h2>
         
         <div class="services-grid">
-            <div class="service-box">
-                <span class="emoji">🌾</span>
-                <span>खेत व मजदूरी</span>
-            </div>
-            <div class="service-box">
-                <span class="emoji">🏗️</span>
-                <span>मिस्त्री व लेबर</span>
-            </div>
-            <div class="service-box">
-                <span class="emoji">🪚</span>
-                <span>फर्नीचर व बढ़ई</span>
-            </div>
-            <div class="service-box">
-                <span class="emoji">⚡</span>
-                <span>बिजली व नल</span>
-            </div>
-            <div class="service-box">
-                <span class="emoji">🚜</span>
-                <span>गाड़ी व ट्रैक्टर</span>
-            </div>
-            <div class="service-box">
-                <span class="emoji">📱</span>
-                <span>मोबाइल व डिजिटल</span>
-            </div>
-            <div class="service-box">
-                <span class="emoji">🎉</span>
-                <span>शादी व टेंट</span>
-            </div>
-            <div class="service-box">
-                <span class="emoji">👗</span>
-                <span>सिलाई व पार्लर</span>
-            </div>
+            <div class="service-box"><span class="emoji">🌾</span><span>खेत व मजदूरी</span></div>
+            <div class="service-box"><span class="emoji">🏗️</span><span>मिस्त्री व लेबर</span></div>
+            <div class="service-box"><span class="emoji">🪚</span><span>फर्नीचर व बढ़ई</span></div>
+            <div class="service-box"><span class="emoji">⚡</span><span>बिजली व नल</span></div>
+            <div class="service-box"><span class="emoji">🚜</span><span>गाड़ी व ट्रैक्टर</span></div>
+            <div class="service-box"><span class="emoji">📱</span><span>मोबाइल व डिजिटल</span></div>
+            <div class="service-box"><span class="emoji">🎉</span><span>शादी व टेंट</span></div>
+            <div class="service-box"><span class="emoji">👗</span><span>सिलाई व पार्लर</span></div>
         </div>
     </div>
 
+    <div class="qr-section">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fwa.me%2F919575859395%3Ftext%3DHi" alt="X Worker WhatsApp QR">
+        <p>📸 कंप्यूटर यूज़र फोन से स्कैन करें</p>
+    </div>
+
+    <div class="fine-print-container">
+        <p class="fine-print"><strong>🔞 आयु सीमा निर्देश:</strong> यह सेवा केवल 18 वर्ष या उससे अधिक आयु के वयस्कों के लिए है। 18 वर्ष से कम उम्र के बच्चों/नाबालिगों को इस नेटवर्क के माध्यम से काम करने या काम पर रखने की सख्त मनाही है।</p>
+        <p class="fine-print"><strong>🔒 प्राइवेसी पॉलिसी:</strong> हम यूज़र्स की गोपनीयता का सम्मान करते हैं। आपके द्वारा दी गई जानकारी (नाम, नंबर, ब्लॉक, हुनर) सुरक्षित डेटाबेस में रहती है और बिना आपकी स्पष्ट सहमति के किसी अन्य यूजर को नहीं दिखाई जाती। इसका उपयोग किसी व्यावसायिक विज्ञापन या स्पैम के लिए नहीं किया जाता।</p>
+        <p class="fine-print"><strong>⚠️ डिस्क्लेमर:</strong> X Worker केवल एक कनेक्टिंग प्लेटफॉर्म है। काम की गुणवत्ता, भुगतान या किसी भी आपसी विवाद के लिए यह नेटवर्क या इसके डेवलपर्स जिम्मेदार नहीं होंगे। अपनी सुरक्षा की जांच स्वयं करें।</p>
+        <p class="fine-print" style="margin-top:10px; font-weight:600;">&copy; 2026 X WORKER | MSME पंजीकृत सेवा | #MandlaMP</p>
+    </div>
+
 </body>
-</html> 
+</html>
