@@ -1,377 +1,96 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ70BC6S32"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RZ70BC6S32);
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X Worker - मंडला काम-नेटवर्क</title>
-
-    <meta property="og:title" content="X Worker - मंडला का अपना लोकल काम-नेटवर्क">
-    <meta property="og:description" content="काम चाहिए या कारीगर? सीधे WhatsApp पर संपर्क करें। 100% फ्री सेवा।">
-    <meta property="og:image" content="314820.png"> <meta property="og:url" content="https://xworker.vhoriginal.com">
-    <meta property="og:type" content="website">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>X Worker - मंडला का अपना नेटवर्क</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --wa-green: #25D366;
-            --wa-dark: #128C7E;
-            --bg-color: #F0F2F5;
-            --card-bg: #FFFFFF;
-            --text-dark: #1C1E21;
-            --text-gray: #65676B;
+        :root { --wa-green: #25D366; --text-dark: #1C1E21; }
+        body { font-family: 'Poppins', sans-serif; background: #F0F2F5; padding-bottom: 80px; margin: 0; }
+        
+        /* नया ब्लर हेडर */
+        .hero { 
+            position: relative; padding: 50px 15px; color: white; text-align: center;
+            background: url('mandla_bg.jpg') center/cover;
         }
+        .hero::before { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); }
+        .hero-content { position: relative; z-index: 1; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* चमकते कार्ड्स */
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 15px; }
+        .service-box { background: white; padding: 20px; border-radius: 15px; text-align: center; transition: 0.3s; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .service-box:hover { transform: scale(1.05); border-color: var(--wa-green); box-shadow: 0 0 15px rgba(37,211,102,0.4); }
 
-        body {
-            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-dark);
-            padding-bottom: 30px;
-        }
+        /* स्टिकी फुटर */
+        .sticky-footer { position: fixed; bottom: 0; width: 100%; background: var(--wa-green); padding: 18px; text-align: center; z-index: 1000; box-shadow: 0 -5px 15px rgba(0,0,0,0.1); }
+        .sticky-footer a { color: white; font-weight: 700; text-decoration: none; font-size: 1.2rem; }
 
-        /* --- Header / Top Bar --- */
-        .top-bar {
-            background: var(--card-bg);
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .brand img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: 2px solid var(--wa-green);
-            padding: 2px;
-        }
-
-        .brand h1 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #1A365D;
-        }
-
-        .msme-badge {
-            background: #EBF8FF;
-            border: 1px solid #90CDF4;
-            color: #2B6CB0;
-            font-size: 0.65rem;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-weight: 600;
-            text-align: right;
-            line-height: 1.2;
-        }
-
-        /* --- Main Hero Section --- */
-        .hero {
-            text-align: center;
-            padding: 25px 15px;
-            background: linear-gradient(180deg, #FFFFFF 0%, #F0F2F5 100%);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-        }
-
-        .main-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #1A365D;
-            margin-bottom: 5px;
-            line-height: 1.3;
-        }
-
-        .sub-title {
-            font-size: 1rem;
-            color: var(--text-gray);
-            margin-bottom: 20px;
-        }
-
-        /* --- BIG NUMBER & BUTTON --- */
-        .contact-box {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            border: 2px solid #E4E6EB;
-            margin: 0 auto 20px auto;
-            max-width: 400px;
-        }
-
-        .big-number-title {
-            font-size: 0.9rem;
-            color: var(--text-gray);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .big-number {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin: 5px 0 15px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .wa-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background-color: var(--wa-green);
-            color: white;
-            text-decoration: none;
-            padding: 16px;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 700;
-            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
-            animation: pulse 2s infinite;
-            width: 100%;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        .sticker-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-
-        .sticker {
-            background: #FFF9C4;
-            color: #F57F17;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            border: 1px solid #FFF59D;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* --- How it Works --- */
-        .section-container {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--text-dark);
-        }
-
-        .step-card {
-            display: flex;
-            align-items: center;
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            border-left: 5px solid var(--wa-green);
-        }
-
-        .step-emoji {
-            font-size: 2.2rem;
-            margin-right: 15px;
-            background: #E8F5E9;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .step-text h3 {
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            margin-bottom: 2px;
-        }
-
-        .step-text p {
-            font-size: 0.85rem;
-            color: var(--text-gray);
-        }
-
-        /* --- Services Grid --- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .service-box {
-            background: var(--card-bg);
-            padding: 15px 10px;
-            text-align: center;
-            border-radius: 12px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-            border: 1px solid #E4E6EB;
-        }
-
-        .service-box .emoji { font-size: 2rem; margin-bottom: 5px; display: block; }
-        .service-box span { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); }
-
-        /* --- QR Code Display --- */
-        .qr-section {
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: 12px;
-            text-align: center;
-            max-width: 220px;
-            margin: 25px auto;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border: 1px solid #E4E6EB;
-        }
-
-        .qr-section img { display: block; margin: 0 auto; width: 160px; height: 160px; }
-        .qr-section p { font-size: 0.75rem; color: var(--text-gray); margin-top: 8px; font-weight: 600; }
-
-        /* --- Fine Print Legal Area (बारीक अक्षर) --- */
-        .fine-print-container {
-            max-width: 500px;
-            margin: 30px auto 10px auto;
-            padding: 0 20px;
-            text-align: center;
-            border-top: 1px solid #E4E6EB;
-            padding-top: 15px;
-        }
-
-        .fine-print {
-            font-size: 0.72rem; /* Extremely small and neat */
-            color: #8A8D91;
-            line-height: 1.4;
-            margin-bottom: 8px;
-        }
-
-        .fine-print strong { color: #65676B; }
-
+        .sticker { background: #FFF9C4; color: #856404; padding: 5px 15px; border-radius: 20px; font-weight: 700; display: inline-block; margin: 5px; }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="brand">
-            <img src="314820.png" alt="X Worker Logo">
-            <h1>X Worker</h1>
-        </div>
-        <div class="msme-badge">
-            ✅ MSME Registered<br>
-            UDYAM-MP-29-0021465
-        </div>
-    </div>
-
     <div class="hero">
-        <h2 class="main-title">काम चाहिए या कारीगर?</h2>
-        <p class="sub-title">मंडला का अपना 100% फ्री लोकल नेटवर्क</p>
-
-        <div class="sticker-row">
-            <div class="sticker">🚫 कोई फीस नहीं</div>
-            <div class="sticker">🤝 सीधा संपर्क</div>
-            <div class="sticker">🔒 नंबर सुरक्षित</div>
-        </div>
-
-        <div class="contact-box">
-            <div class="big-number-title">हमारा WhatsApp नंबर</div>
-            <div class="big-number">📱 95758 59395</div>
-            
-            <a href="https://wa.me/919575859395?text=Hi" class="wa-btn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" width="28">
-                यहाँ दबाएं और "Hi" भेजें
-            </a>
-        </div>
-    </div>
-
-    <div class="section-container">
-        <h2 class="section-title">👉 यह कैसे काम करता है?</h2>
-        
-        <div class="step-card">
-            <div class="step-emoji">💬</div>
-            <div class="step-text">
-                <h3>1. बस 'Hi' भेजें</h3>
-                <p>हरे बटन को दबाएं या हमारे नंबर पर WhatsApp करें।</p>
+        <div class="hero-content">
+            <h1 style="font-size: 2rem;">X Worker</h1>
+            <p>मंडला का अपना 100% फ्री लोकल नेटवर्क</p>
+            <div style="margin: 20px 0;">
+                <div class="sticker">🚫 कोई फीस नहीं</div>
+                <div class="sticker">🤝 सीधा संपर्क</div>
+                <div class="sticker">🔒 नंबर सुरक्षित</div>
             </div>
-        </div>
-
-        <div class="step-card">
-            <div class="step-emoji">👆</div>
-            <div class="step-text">
-                <h3>2. बटन दबाकर चुनें</h3>
-                <p>चैट में ही अपना काम और एरिया (ब्लॉक) चुनें।</p>
-            </div>
-        </div>
-
-        <div class="step-card">
-            <div class="step-emoji">📞</div>
-            <div class="step-text">
-                <h3>3. सीधी बात करें</h3>
-                <p>मैच मिलते ही नंबर मिलेगा, सीधे फोन पर बात तय करें!</p>
+            <div style="background: white; color: #333; padding: 15px; border-radius: 12px; max-width: 300px; margin: auto;">
+                <p style="font-size: 0.8rem; font-weight: 600;">हमारा WhatsApp नंबर</p>
+                <h2 style="font-size: 1.8rem; margin: 5px 0;">95758 59395</h2>
             </div>
         </div>
     </div>
 
-    <div class="section-container">
-        <h2 class="section-title">🛠️ यहाँ कौन से काम मिलते हैं?</h2>
-        
-        <div class="services-grid">
-            <div class="service-box"><span class="emoji">🌾</span><span>खेत व मजदूरी</span></div>
-            <div class="service-box"><span class="emoji">🏗️</span><span>मिस्त्री व लेबर</span></div>
-            <div class="service-box"><span class="emoji">🪚</span><span>फर्नीचर व बढ़ई</span></div>
-            <div class="service-box"><span class="emoji">⚡</span><span>बिजली व नल</span></div>
-            <div class="service-box"><span class="emoji">🚜</span><span>गाड़ी व ट्रैक्टर</span></div>
-            <div class="service-box"><span class="emoji">📱</span><span>मोबाइल व डिजिटल</span></div>
-            <div class="service-box"><span class="emoji">🎉</span><span>शादी व टेंट</span></div>
-            <div class="service-box"><span class="emoji">👗</span><span>सिलाई व पार्लर</span></div>
+    <section style="padding: 25px; background: white; text-align: center; margin: 15px; border-radius: 15px;">
+        <h2 style="color: #1A365D;">क्यों परेशान होना? 😌</h2>
+        <p style="color: #65676B; line-height: 1.6; margin-top: 10px;">
+            आज के समय में काम ढूँढना मुश्किल है और सही कारीगर ढूँढना उससे भी बड़ा सिरदर्द! 
+            मंडला में रहकर हम एक-दूसरे की मदद कर सकते हैं। जब हम लोकल में काम करेंगे, तो पैसा भी अपने मंडला में रहेगा और काम भी हाथों-हाथ होगा।
+        </p>
+    </section>
+
+    <div style="text-align: center; padding: 10px; font-weight: 600; color: #2B6CB0; font-size: 1.1rem;">
+        🟢 अभी मंडला के 142+ लोग जुड़े हैं!
+    </div>
+
+    <div class="services-grid">
+        <div class="service-box">🌾<br><span>खेत व मजदूरी</span></div>
+        <div class="service-box">🏗️<br><span>मिस्त्री व लेबर</span></div>
+        <div class="service-box">🪚<br><span>बढ़ई</span></div>
+        <div class="service-box">⚡<br><span>बिजली व नल</span></div>
+        <div class="service-box">🚜<br><span>गाड़ी व ट्रैक्टर</span></div>
+        <div class="service-box">📱<br><span>डिजिटल सेवा</span></div>
+        <div class="service-box">🎉<br><span>शादी व टेंट</span></div>
+        <div class="service-box">👗<br><span>सिलाई व पार्लर</span></div>
+    </div>
+
+    <section style="background: white; padding: 20px; margin: 15px; border-radius: 15px;">
+        <h2 style="text-align: center; color: #1A365D; margin-bottom: 15px;">❓ अक्सर पूछे जाने वाले सवाल</h2>
+        <div style="font-size: 0.95rem; color: #444; line-height: 2;">
+            <p>✅ <b>क्या यह फ्री है?</b> हाँ, पूरी तरह से फ्री सेवा! 🆓</p>
+            <p>✅ <b>नंबर सुरक्षित है?</b> हाँ, सिर्फ मैच होने पर ही नंबर शेयर होता है। 🔒</p>
+            <p>✅ <b>स्पैम कॉल का डर?</b> नहीं, क्योंकि दोनों की 'हाँ' के बिना नंबर नहीं दिखता। 🚫</p>
+            <p>✅ <b>काम की गारंटी?</b> यह एक माध्यम है, काम की जांच आप स्वयं करें। 🛠️</p>
+            <p>✅ <b>कैसे शुरू करें?</b> बस WhatsApp पर 'Hi' भेजें! 📱</p>
         </div>
+    </section>
+
+    <section style="padding: 20px; text-align: center;">
+        <h2 style="color: #1A365D; margin-bottom: 20px;">👉 काम मिलने का प्रोसेस</h2>
+        <div style="font-weight: 600; color: #2B6CB0;">
+            'Hi' भेजें 💬 <br>↓<br> अपना काम और इलाका चुनें 👆 <br>↓<br> सीधा फ़ोन पर बात करें 📞
+        </div>
+    </section>
+
+    <div class="sticky-footer">
+        <a href="https://wa.me/919575859395?text=Hi">👉 काम ढूंढना है? यहाँ दबाएं 📱</a>
     </div>
 
-    <div class="qr-section">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fwa.me%2F919575859395%3Ftext%3DHi" alt="X Worker WhatsApp QR">
-        <p>📸 कंप्यूटर यूज़र फोन से स्कैन करें</p>
-    </div>
-
-    <div class="fine-print-container">
-        <p class="fine-print"><strong>🔞 आयु सीमा निर्देश:</strong> यह सेवा केवल 18 वर्ष या उससे अधिक आयु के वयस्कों के लिए है। 18 वर्ष से कम उम्र के बच्चों/नाबालिगों को इस नेटवर्क के माध्यम से काम करने या काम पर रखने की सख्त मनाही है।</p>
-        <p class="fine-print"><strong>🔒 प्राइवेसी पॉलिसी:</strong> हम यूज़र्स की गोपनीयता का सम्मान करते हैं। आपके द्वारा दी गई जानकारी (नाम, नंबर, ब्लॉक, हुनर) सुरक्षित डेटाबेस में रहती है और बिना आपकी स्पष्ट सहमति के किसी अन्य यूजर को नहीं दिखाई जाती। इसका उपयोग किसी व्यावसायिक विज्ञापन या स्पैम के लिए नहीं किया जाता।</p>
-        <p class="fine-print"><strong>⚠️ डिस्क्लेमर:</strong> X Worker केवल एक कनेक्टिंग प्लेटफॉर्म है। काम की गुणवत्ता, भुगतान या किसी भी आपसी विवाद के लिए यह नेटवर्क या इसके डेवलपर्स जिम्मेदार नहीं होंगे। अपनी सुरक्षा की जांच स्वयं करें।</p>
-        <p class="fine-print" style="margin-top:10px; font-weight:600;">&copy; 2026 X WORKER | MSME पंजीकृत सेवा | #MandlaMP</p>
-    </div>
 </body>
 </html>
