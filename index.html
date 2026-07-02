@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-981222700">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-981222700');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ70BC6S32"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RZ70BC6S32');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X Worker — मध्य प्रदेश का लोकल काम नेटवर्क | 100% Free</title>
+<meta property="og:title" content="X Worker — मध्य प्रदेश का लोकल काम नेटवर्क">
+<meta property="og:description" content="राजमिस्त्री, ड्राइवर, इलेक्ट्रीशियन... सब WhatsApp पर मिनटों में। 100% फ्री।">
+<meta property="og:image" content="https://xworker.vhoriginal.com/mandla_bg.jpg">
+<meta property="og:url" content="https://xworker.vhoriginal.com">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#25D366;--green-d:#128C7E;--green-glow:rgba(37,211,102,0.25);
+  --orange:#FF6B35;--gold:#FFD700;--red:#FF4444;
+  --bg:#0a0a0a;--card:#141414;--card2:#1a1a1a;
+  --text:#f0f0f0;--muted:#888;--border:#222;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins','Noto Sans Devanagari',sans-serif;background:var(--bg);color:var(--text);padding-bottom:85px;overflow-x:hidden;}
+
+/* ── TOP BAR ── */
+.topbar{background:#000;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1a1a1a;}
+.brand{display:flex;align-items:center;gap:8px;}
+.brand img{width:36px;height:36px;border-radius:50%;border:2px solid var(--green);}
+.brand-name{font-size:1.15rem;font-weight:800;color:#fff;letter-spacing:-0.3px;}
+.msme{background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.3);color:#7ec99a;font-size:0.6rem;padding:3px 8px;border-radius:5px;font-weight:700;text-align:right;line-height:1.4;}
+
+/* ── HERO ── */
+.hero{position:relative;padding:32px 16px 28px;text-align:center;background:url('mandla_bg.jpg') center/cover no-repeat;}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.9) 100%);}
+.hero-inner{position:relative;z-index:1;max-width:560px;margin:0 auto;}
+
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.3);color:var(--green);font-size:0.72rem;font-weight:700;padding:5px 12px;border-radius:20px;margin-bottom:14px;letter-spacing:0.5px;}
+.dot{width:7px;height:7px;background:var(--green);border-radius:50%;}
+
+.hero-title{font-size:2rem;font-weight:900;color:#fff;line-height:1.15;margin-bottom:8px;letter-spacing:-0.5px;}
+.hero-title .hl{color:var(--green);}
+.hero-title .hl2{color:var(--gold);}
+.hero-sub{font-size:0.95rem;color:#bbb;margin-bottom:22px;line-height:1.6;}
+
+/* ── DUAL CTA ── */
+.dual-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:400px;margin:0 auto 20px;}
+.cta-worker{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:linear-gradient(135deg,#1a3a2a,#0d2b1a);border:2px solid var(--green);border-radius:14px;padding:16px 12px;text-decoration:none;transition:transform 0.15s;}
+.cta-customer{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:linear-gradient(135deg,#2a1a0d,#1f1206);border:2px solid var(--gold);border-radius:14px;padding:16px 12px;text-decoration:none;transition:transform 0.15s;}
+.cta-worker:active,.cta-customer:active{transform:scale(0.97);}
+.cta-emoji{font-size:1.8rem;}
+.cta-label{font-size:0.9rem;font-weight:800;color:#fff;}
+.cta-sub{font-size:0.68rem;color:#aaa;text-align:center;}
+.cta-worker .cta-label{color:var(--green);}
+.cta-customer .cta-label{color:var(--gold);}
+
+/* ── TRUST STRIP ── */
+.trust-strip{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:5px;font-size:0.72rem;color:#aaa;font-weight:600;}
+.trust-dot{color:var(--green);}
+
+/* ── STATS STRIP ── */
+.stats-strip{background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:11px 16px;text-align:center;}
+.stats-text{color:var(--green);font-size:0.82rem;font-weight:700;}
+
+/* ── SECTION ── */
+.sec{max-width:600px;margin:0 auto;padding:22px 14px 0;}
+.sec-title{font-size:1.25rem;font-weight:800;margin-bottom:16px;text-align:center;}
+.sec-title .accent{color:var(--green);}
+.sec-title .accent2{color:var(--gold);}
+
+/* ── REASSURANCE BOX ── */
+.reassure-box{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:18px 16px;}
+.reassure-title{font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:8px;}
+.reassure-text{font-size:0.85rem;color:var(--muted);line-height:1.6;margin-bottom:12px;}
+.never-list{display:flex;flex-direction:column;gap:7px;}
+.never-item{font-size:0.82rem;color:#ddd;font-weight:600;}
+
+/* ── WORKER SECTION ── */
+.worker-intro{background:linear-gradient(135deg,#0d2b1a,#0a1f13);border:1.5px solid rgba(37,211,102,0.3);border-radius:16px;padding:18px 16px;margin-bottom:16px;}
+.wi-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.wi-icon{font-size:2rem;}
+.wi-title{font-size:1.1rem;font-weight:800;color:var(--green);}
+.wi-sub{font-size:0.8rem;color:#7ec99a;}
+.wi-stat{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.wi-chip{background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.2);color:var(--green);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:20px;}
+
+/* ── CUSTOMER SECTION ── */
+.cust-intro{background:linear-gradient(135deg,#2a1e0a,#1a1206);border:1.5px solid rgba(255,215,0,0.25);border-radius:16px;padding:18px 16px;margin-bottom:16px;}
+.ci-title{font-size:1.1rem;font-weight:800;color:var(--gold);}
+.ci-sub{font-size:0.8rem;color:#c9a84c;}
+.ci-chip{background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);color:var(--gold);font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:20px;}
+
+/* ── CATEGORIES GRID ── */
+.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.cat-card{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:14px 10px 12px;text-align:center;cursor:pointer;transition:all 0.2s;text-decoration:none;display:block;}
+.cat-card:hover,.cat-card:active{border-color:var(--green);background:#141f18;transform:translateY(-2px);}
+.cat-emoji{font-size:1.9rem;margin-bottom:6px;display:block;}
+.cat-name{font-size:0.88rem;font-weight:700;color:#fff;display:block;margin-bottom:4px;}
+.cat-subs{font-size:0.68rem;color:var(--muted);line-height:1.5;}
+.more-cats{text-align:center;margin-top:10px;font-size:0.8rem;color:var(--muted);font-style:italic;}
+
+/* ── TRUST CARDS ── */
+.trust-cards{display:flex;flex-direction:column;gap:10px;}
+.tc{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:16px 14px;display:flex;gap:12px;align-items:flex-start;}
+.tc-icon{font-size:2rem;flex-shrink:0;}
+.tc-title{font-size:0.95rem;font-weight:800;color:#fff;margin-bottom:3px;}
+.tc-desc{font-size:0.8rem;color:var(--muted);line-height:1.5;}
+
+/* ── HOW IT WORKS ── */
+.steps{display:flex;flex-direction:column;gap:0;}
+.step{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border);}
+.step:last-child{border-bottom:none;}
+.step-num{background:var(--green);color:#000;font-size:0.8rem;font-weight:900;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.step-title{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:3px;}
+.step-desc{font-size:0.8rem;color:var(--muted);line-height:1.5;}
+
+/* ── PINCODE FINDER ── */
+.pin-box{background:#0d1117;border:1.5px solid var(--green);border-radius:16px;overflow:hidden;}
+.pin-head{background:linear-gradient(135deg,#0d2b1a,#0a1f13);padding:16px;text-align:center;border-bottom:1px solid rgba(37,211,102,0.2);}
+.pin-head h3{font-size:1.05rem;font-weight:800;color:var(--green);margin-bottom:3px;}
+.pin-head p{font-size:0.78rem;color:#7ec99a;}
+.pin-body{padding:14px;}
+.step-lbl{font-size:0.7rem;color:#7ec99a;text-transform:uppercase;letter-spacing:0.8px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:5px;}
+.s-num{background:var(--green);color:#000;font-size:9px;font-weight:900;width:16px;height:16px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;}
+.d-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+.d-btn{background:#161b22;border:1.5px solid #1e2a1e;color:#c9d1d9;border-radius:9px;padding:9px 5px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;text-align:center;transition:all 0.12s;}
+.d-btn:hover{border-color:var(--green);color:var(--green);}
+.d-btn.act{background:#0d2b1a;border-color:var(--green);color:var(--green);}
+.area-sec{display:none;padding-top:12px;}
+.area-sec.vis{display:block;}
+.sel-bar{background:#0d2b1a;border:1.5px solid var(--green);border-radius:9px;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.sel-name{font-size:15px;font-weight:800;color:var(--green);}
+.chg-btn{background:transparent;border:1px solid #2a3a2a;color:#7ec99a;border-radius:7px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:inherit;}
+.a-search{display:flex;align-items:center;background:#161b22;border:1.5px solid #1e2a1e;border-radius:9px;margin-bottom:8px;overflow:hidden;}
+.a-search:focus-within{border-color:var(--green);}
+.a-search input{flex:1;background:transparent;border:none;outline:none;color:#e6edf3;font-size:14px;padding:11px 12px;font-family:inherit;}
+.a-search input::placeholder{color:#444;}
+.a-search-icon{padding:0 10px;color:#444;font-size:14px;}
+.a-count{font-size:11px;color:#7ec99a;margin-bottom:7px;}
+.a-list{display:flex;flex-direction:column;gap:6px;max-height:300px;overflow-y:auto;}
+.a-card{background:#161b22;border:1.5px solid #1e2a1e;border-radius:9px;padding:10px 12px;display:flex;align-items:center;gap:8px;}
+.a-info{flex:1;min-width:0;}
+.a-name{font-size:14px;font-weight:700;color:#e6edf3;}
+.a-dist{font-size:10px;color:#7ec99a;margin-top:1px;}
+.a-pin{font-size:15px;font-weight:800;color:#58a6ff;font-family:'Courier New',monospace;letter-spacing:1px;white-space:nowrap;}
+.copy-btn{background:#1c2128;border:1.5px solid #2a3a2a;color:#8b949e;border-radius:7px;padding:7px 10px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.12s;white-space:nowrap;}
+.copy-btn:hover{border-color:var(--green);color:var(--green);}
+.copy-btn.done{background:#0d2b1a;border-color:var(--green);color:var(--green);}
+.pin-wa{background:var(--green);padding:14px 16px;display:flex;align-items:center;gap:10px;text-decoration:none;margin:14px -14px -14px;}
+.pin-wa-txt strong{display:block;font-size:13px;font-weight:800;color:#000;}
+.pin-wa-txt span{font-size:11px;color:rgba(0,0,0,0.6);}
+.pin-wa-arr{color:#000;font-size:18px;margin-left:auto;}
+
+/* ── FAQ ── */
+.faq{display:flex;flex-direction:column;gap:8px;}
+.fq{background:var(--card);border:1.5px solid var(--border);border-radius:12px;overflow:hidden;}
+.fq-q{padding:14px 16px;font-size:0.9rem;font-weight:700;color:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.fq-q .arr{color:var(--muted);transition:transform 0.2s;font-size:0.8rem;}
+.fq.open .arr{transform:rotate(180deg);}
+.fq-a{display:none;padding:0 16px 14px;font-size:0.82rem;color:var(--muted);line-height:1.7;}
+.fq.open .fq-a{display:block;}
+
+/* ── SUPPORT BOX ── */
+.support-box{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:18px 16px;text-align:center;}
+.support-title{font-size:1rem;font-weight:800;color:#fff;margin-bottom:6px;}
+.support-text{font-size:0.82rem;color:var(--muted);margin-bottom:14px;line-height:1.5;}
+.support-btn{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid var(--green);color:var(--green);padding:11px 20px;border-radius:12px;font-size:0.88rem;font-weight:700;text-decoration:none;}
+
+/* ── FINE PRINT ── */
+.fine{text-align:center;font-size:0.72rem;color:#444;padding:20px 14px;border-top:1px solid var(--border);line-height:1.7;margin-top:20px;}
+.fine strong{color:#666;}
+
+/* ── STICKY WA ── */
+.wa-sticky{position:fixed;bottom:0;left:0;right:0;z-index:100;padding:10px 12px 14px;background:linear-gradient(to top,#0a0a0a 60%,transparent);}
+.wa-main{max-width:600px;margin:0 auto;display:flex;align-items:center;gap:12px;background:var(--green);border-radius:14px;padding:14px 18px;text-decoration:none;box-shadow:0 6px 24px var(--green-glow);}
+.wa-logo{width:34px;height:34px;flex-shrink:0;}
+.wa-txt strong{display:block;font-size:14px;font-weight:800;color:#000;}
+.wa-txt span{font-size:11px;color:rgba(0,0,0,0.6);}
+.wa-arr{color:#000;font-size:20px;font-weight:700;margin-left:auto;}
+
+/* ── TOAST ── */
+.toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-20px);background:#0d2b1a;border:1px solid var(--green);color:var(--green);padding:9px 22px;border-radius:22px;font-size:13px;font-weight:700;opacity:0;transition:all 0.25s;pointer-events:none;z-index:999;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+@media(max-width:380px){.d-grid{grid-template-columns:repeat(2,1fr);}.dual-cta{grid-template-columns:1fr 1fr;gap:8px;}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="brand">
+    <img src="314820.png" alt="X Worker">
+    <span class="brand-name">X Worker</span>
+  </div>
+  <div class="msme">✅ MSME Registered<br>UDYAM-MP-29-0021465</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      मध्य प्रदेश के 55 जिले • अभी Active
+    </div>
+    <h1 class="hero-title">
+      काम चाहिए?<br>
+      <span class="hl">कारीगर चाहिए?</span><br>
+      <span class="hl2">WhatsApp पर मिनटों में!</span>
+    </h1>
+    <p class="hero-sub">MP का पहला 100% Free लोकल काम नेटवर्क<br>राजमिस्त्री से लेकर ड्राइवर तक — सब यहाँ हैं</p>
+
+    <div class="dual-cta">
+      <a href="https://wa.me/919575859395?text=Hi%20मुझे%20काम%20चाहिए" class="cta-worker">
+        <span class="cta-emoji">🔨</span>
+        <span class="cta-label">काम चाहिए</span>
+        <span class="cta-sub">रोज़गार पाएं<br>Free में</span>
+      </a>
+      <a href="https://wa.me/919575859395?text=Hi%20मुझे%20कारीगर%20चाहिए" class="cta-customer">
+        <span class="cta-emoji">🏠</span>
+        <span class="cta-label">कारीगर चाहिए</span>
+        <span class="cta-sub">सही आदमी<br>तुरंत पाएं</span>
+      </a>
+    </div>
+
+    <div class="trust-strip">
+      <span class="trust-item"><span class="trust-dot">✅</span> कोई फीस नहीं</span>
+      <span class="trust-item"><span class="trust-dot">🔒</span> नंबर सुरक्षित</span>
+      <span class="trust-item"><span class="trust-dot">⚡</span> मिनटों में जवाब</span>
+    </div>
+  </div>
+</div>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <span class="stats-text">📊 1800+ लोग जुड़ चुके हैं • 1000+ काम पोस्ट हो चुके हैं</span>
+</div>
+
+<!-- REASSURANCE -->
+<div class="sec" style="margin-top:20px;">
+  <div class="reassure-box">
+    <div class="reassure-title">🙏 आपकी बात समझते हैं</div>
+    <p class="reassure-text">नए नंबर या ऐप पर भरोसा करना आसान नहीं होता — ये हम समझते हैं। इसलिए साफ-साफ बता रहे हैं:</p>
+    <div class="never-list">
+      <div class="never-item">❌ हम कभी OTP नहीं मांगते</div>
+      <div class="never-item">❌ हम कभी आधार नंबर नहीं मांगते</div>
+      <div class="never-item">❌ रजिस्ट्रेशन का एक रुपया भी नहीं लगता</div>
+      <div class="never-item">❌ बैंक डिटेल या पैसा कभी नहीं मांगा जाता</div>
+    </div>
+  </div>
+</div>
+
+<!-- WORKER SECTION -->
+<div class="sec">
+  <div class="sec-title">🔨 <span class="accent">काम करने वालों</span> के लिए</div>
+  <div class="worker-intro">
+    <div class="wi-head">
+      <span class="wi-icon">💰</span>
+      <div>
+        <div class="wi-title">अपने घर के पास काम पाएं</div>
+        <div class="wi-sub">Bike से जाओ, पैसे कमाओ — रोज़ाना</div>
+      </div>
+    </div>
+    <div class="wi-stat">
+      <span class="wi-chip">✅ 100% Free रजिस्ट्रेशन</span>
+      <span class="wi-chip">📍 अपने जिले में काम</span>
+      <span class="wi-chip">📱 WhatsApp पर Alert</span>
+      <span class="wi-chip">🚫 कोई बिचौलिया नहीं</span>
+    </div>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20काम%20चाहिए" style="display:flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#000;padding:13px;border-radius:12px;font-size:1rem;font-weight:800;text-decoration:none;">
+      💬 अभी रजिस्टर करें — Free
+    </a>
+  </div>
+</div>
+
+<!-- CATEGORIES (WORKER VIEW) -->
+<div class="sec">
+  <div class="sec-title">🛠️ कौन से <span class="accent">काम मिलते हैं?</span></div>
+  <div class="cat-grid">
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20निर्माण%20और%20मिस्त्री%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">🏗️</span>
+      <span class="cat-name">निर्माण और मिस्त्री</span>
+      <span class="cat-subs">राजमिस्त्री • पेंटर • टाइल्स • वेल्डर</span>
+    </a>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20घर%20की%20मरम्मत%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">🔧</span>
+      <span class="cat-name">घर की मरम्मत</span>
+      <span class="cat-subs">बिजली • नल • कूलर/AC • बढ़ई</span>
+    </a>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20खेत%20और%20किसानी%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">🌾</span>
+      <span class="cat-name">खेत और किसानी</span>
+      <span class="cat-subs">खेत मजदूर • ट्रैक्टर • फसल कटाई</span>
+    </a>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20गाड़ी%20और%20ढुलाई%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">🚚</span>
+      <span class="cat-name">गाड़ी और ढुलाई</span>
+      <span class="cat-subs">पिकअप • कार ड्राइवर • मैकेनिक</span>
+    </a>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20घर%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">🧹</span>
+      <span class="cat-name">घर का काम</span>
+      <span class="cat-subs">झाड़ू-पोछा • कुक • केयरटेकर • माली</span>
+    </a>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20शादी%20और%20आयोजन%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">🎪</span>
+      <span class="cat-name">शादी और आयोजन</span>
+      <span class="cat-subs">हलवाई • टेंट • DJ • फोटो • पंडित</span>
+    </a>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20दुकान%20और%20नौकरी%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">🏪</span>
+      <span class="cat-name">दुकान और नौकरी</span>
+      <span class="cat-subs">सेल्समैन • गार्ड • डिलीवरी • हेल्पर</span>
+    </a>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20ब्यूटी%20और%20सिलाई%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">💄</span>
+      <span class="cat-name">ब्यूटी और सिलाई</span>
+      <span class="cat-subs">ब्यूटीशियन • मेहंदी • दर्जी • मेकअप</span>
+    </a>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20स्वास्थ्य%20सेवा%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">🏥</span>
+      <span class="cat-name">स्वास्थ्य सेवा</span>
+      <span class="cat-subs">नर्स • अटेंडेंट • फिजियोथेरेपिस्ट</span>
+    </a>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20पशुपालन%20का%20काम%20चाहिए" class="cat-card">
+      <span class="cat-emoji">🐄</span>
+      <span class="cat-name">पशुपालन</span>
+      <span class="cat-subs">चरवाहा • डेयरी हेल्पर • पशु सहायक</span>
+    </a>
+  </div>
+  <div class="more-cats">✦ और भी काम हैं — WhatsApp पर देखें सब कुछ</div>
+</div>
+
+<!-- CUSTOMER SECTION -->
+<div class="sec" style="margin-top:24px;">
+  <div class="sec-title">🏠 <span class="accent2">काम करवाने वालों</span> के लिए</div>
+  <div class="cust-intro">
+    <div class="wi-head">
+      <span class="wi-icon">⚡</span>
+      <div>
+        <div class="ci-title">सही कारीगर — मिनटों में</div>
+        <div class="ci-sub">नंबर मिलेगा, सीधे बात होगी, काम तय होगा</div>
+      </div>
+    </div>
+    <div class="wi-stat">
+      <span class="ci-chip">🔒 नंबर सुरक्षित</span>
+      <span class="ci-chip">📍 आपके जिले में</span>
+      <span class="ci-chip">💯 100% Free</span>
+      <span class="ci-chip">📞 कॉल पर बात करके तय करें</span>
+    </div>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20कारीगर%20चाहिए" style="display:flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:#000;padding:13px;border-radius:12px;font-size:1rem;font-weight:800;text-decoration:none;">
+      💬 कारीगर खोजें — अभी Free
+    </a>
+  </div>
+</div>
+
+<!-- TRUST CARDS -->
+<div class="sec" style="margin-top:24px;">
+  <div class="sec-title">🤔 लोग <span class="accent">X Worker क्यों चुनते हैं?</span></div>
+  <div class="trust-cards">
+    <div class="tc">
+      <span class="tc-icon">🚫</span>
+      <div>
+        <div class="tc-title">कोई दलाल नहीं, कोई कमीशन नहीं</div>
+        <div class="tc-desc">न कामगार से पैसा, न काम देने वाले से। MP में पहली बार — पूरी तरह Free लोकल नेटवर्क।</div>
+      </div>
+    </div>
+    <div class="tc">
+      <span class="tc-icon">📍</span>
+      <div>
+        <div class="tc-title">आपके जिले में, आपकी भाषा में</div>
+        <div class="tc-desc">पूरे MP के 55 जिलों में काम मिलेगा। अपनी भाषा में जैसे बात करते हैं वैसे लिखिए — हमारा AI समझ जाएगा।</div>
+      </div>
+    </div>
+    <div class="tc">
+      <span class="tc-icon">🤝</span>
+      <div>
+        <div class="tc-title">आपके ही जिले में, पहचान का भरोसा</div>
+        <div class="tc-desc">छोटे जिले-एरिया में लोग एक-दूसरे को जानते हैं। नाम, नंबर — सब चैट में रहता है, बात कॉल पर होती है।</div>
+      </div>
+    </div>
+    <div class="tc">
+      <span class="tc-icon">🌱</span>
+      <div>
+        <div class="tc-title">नए हों या पुराने — सबको मौका</div>
+        <div class="tc-desc">हम हर किसी को काम का मौका देते हैं। मैच होने के बाद कॉल पर बात करके काम और भरोसा दोनों खुद तय करें।</div>
+      </div>
+    </div>
+    <div class="tc">
+      <span class="tc-icon">🔒</span>
+      <div>
+        <div class="tc-title">नंबर तभी मिलेगा जब आप चाहोगे</div>
+        <div class="tc-desc">आपका नंबर किसी को भी बिना मर्ज़ी के नहीं दिया जाएगा। Spam का डर नहीं।</div>
+      </div>
+    </div>
+    <div class="tc">
+      <span class="tc-icon">⚡</span>
+      <div>
+        <div class="tc-title">WhatsApp पर — कोई App नहीं चाहिए</div>
+        <div class="tc-desc">बस "Hi" भेजो — सब कुछ WhatsApp पर होगा। न Download, न Login, न झंझट।</div>
+      </div>
+    </div>
+    <div class="tc">
+      <span class="tc-icon">🏛️</span>
+      <div>
+        <div class="tc-title">MSME Registered — भरोसेमंद सेवा</div>
+        <div class="tc-desc">सरकारी MSME नंबर: UDYAM-MP-29-0021465 — सरकार के पास रजिस्टर्ड, कोई फर्जी ऐप नहीं। MP में बनी, MP के लिए।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="sec" style="margin-top:24px;">
+  <div class="sec-title">👉 काम मिलने का <span class="accent">तरीका</span></div>
+  <div style="background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:6px 16px;">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">WhatsApp पर "Hi" भेजें 💬</div>
+          <div class="step-desc">95758 59395 पर बस "Hi" लिखकर भेजें — तुरंत जवाब आएगा</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Pincode डालें, काम चुनें 📍</div>
+          <div class="step-desc">अपना 6 अंकों का Pincode और काम का प्रकार बताएं — नीचे list से पता करें</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">सीधे नंबर पर बात करें 📞</div>
+          <div class="step-desc">मैच होते ही दोनों को नंबर मिलेगा — काम और पैसा फोन पर तय करें</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PINCODE FINDER -->
+<div class="sec" style="margin-top:24px;">
+  <div class="sec-title">📍 अपना <span class="accent">Pincode</span> खोजें</div>
+  <div class="pin-box">
+    <div class="pin-head">
+      <h3>📍 Pincode पता करें → WhatsApp पर रजिस्टर करें</h3>
+      <p>पहले जिला चुनें, फिर एरिया और Pincode देखें</p>
+    </div>
+    <div class="pin-body">
+      <div id="distSec">
+        <div class="step-lbl"><span class="s-num">1</span> अपना जिला चुनें</div>
+        <div class="d-grid" id="dGrid"></div>
+      </div>
+      <div class="area-sec" id="areaSec">
+        <div class="step-lbl"><span class="s-num">2</span> एरिया और Pincode देखें</div>
+        <div class="sel-bar">
+          <span class="sel-name" id="selName"></span>
+          <button class="chg-btn" onclick="resetDist()">← बदलें</button>
+        </div>
+        <div class="a-search">
+          <span class="a-search-icon">🔍</span>
+          <input type="text" id="aSearch" placeholder="एरिया या गाँव खोजें..." autocomplete="off">
+        </div>
+        <div class="a-count" id="aCount"></div>
+        <div class="a-list" id="aList"></div>
+      </div>
+      <a href="https://wa.me/919575859395?text=Hi" class="pin-wa" target="_blank" rel="noopener">
+        <svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#075E54"/><path d="M34.5 13.5C32.1 11.1 28.9 9.8 25.5 9.8C18.5 9.8 12.8 15.5 12.8 22.5C12.8 24.8 13.4 27 14.5 28.9L12.7 35.5L19.5 33.7C21.3 34.7 23.4 35.3 25.5 35.3C32.5 35.3 38.2 29.6 38.2 22.6C38.2 19.2 36.9 16 34.5 13.5ZM25.5 33.1C23.6 33.1 21.8 32.6 20.2 31.6L19.8 31.4L15.8 32.4L16.8 28.5L16.6 28.1C15.5 26.4 14.9 24.5 14.9 22.5C14.9 16.7 19.7 11.9 25.5 11.9C28.3 11.9 30.9 13 32.9 14.9C34.9 16.9 36 19.6 36 22.5C36 28.4 31.3 33.1 25.5 33.1ZM31.3 25.3C31 25.1 29.5 24.4 29.2 24.3C28.9 24.2 28.7 24.1 28.5 24.4C28.3 24.7 27.8 25.3 27.6 25.5C27.4 25.7 27.3 25.8 27 25.6C26.7 25.4 25.7 25.1 24.6 24.1C23.7 23.3 23.1 22.3 22.9 22C22.7 21.7 22.9 21.5 23.1 21.3C23.3 21.1 23.5 20.9 23.7 20.7C23.9 20.5 23.9 20.3 24 20.1C24.1 19.9 24.1 19.7 24 19.5C23.9 19.3 23.3 17.8 23 17.2C22.8 16.6 22.5 16.7 22.3 16.7H21.8C21.6 16.7 21.3 16.8 21 17.1C20.7 17.4 19.9 18.1 19.9 19.6C19.9 21.1 21 22.5 21.2 22.7C21.4 22.9 23.1 25.6 25.8 26.9C26.4 27.2 26.9 27.4 27.3 27.5C27.9 27.7 28.5 27.7 28.9 27.6C29.4 27.5 30.4 26.9 30.7 26.2C31 25.6 31 25 30.9 24.9L31.3 25.3Z" fill="white"/></svg>
+        <div class="pin-wa-txt">
+          <strong>Pincode मिला? अभी रजिस्टर करें</strong>
+          <span>WhatsApp पर "Hi" भेजें → शुरू हो जाएगा</span>
+        </div>
+        <span class="pin-wa-arr">›</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="sec" style="margin-top:24px;">
+  <div class="sec-title">❓ <span class="accent">अक्सर पूछे जाने वाले</span> सवाल</div>
+  <div class="faq">
+    <div class="fq open">
+      <div class="fq-q" onclick="toggleFaq(this)">✅ सच में कोई फीस नहीं लगती? <span class="arr">▼</span></div>
+      <div class="fq-a">जी हाँ — न कामगार से, न काम देने वाले से। पूरी तरह Free। हमेशा।</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)">📍 Pincode क्यों डालना है? <span class="arr">▼</span></div>
+      <div class="fq-a">Pincode से हम आपके नज़दीकी कारीगर या ग्राहक से मिलाते हैं — इससे काम जल्दी और सस्ता होता है।</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)">🔒 मेरा नंबर सबको दिखेगा क्या? <span class="arr">▼</span></div>
+      <div class="fq-a">बिल्कुल नहीं। आपका नंबर सिर्फ तब दिया जाएगा जब आप किसी को खुद चुनेंगे।</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)">💰 पैसा ना मिले तो क्या करें? <span class="arr">▼</span></div>
+      <div class="fq-a">काम शुरू करने से पहले पैसे की बात साफ कर लें — कितना, कब मिलेगा। ज़्यादातर काम आपके ही जिले में होते हैं जहां पहचान का भरोसा होता है, इसलिए दिक्कत कम आती है।</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)">⭐ वर्कर भरोसेमंद है ये कैसे पता करें? <span class="arr">▼</span></div>
+      <div class="fq-a">हम नए और पुराने, सभी वर्कर को मौका देते हैं। मैच होने के बाद कॉल पर बात करें, काम के बारे में पूछें — फिर खुद तय करें। यही सबसे भरोसेमंद तरीका है।</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)">📱 क्या कोई App Download करनी होगी? <span class="arr">▼</span></div>
+      <div class="fq-a">नहीं! सब कुछ WhatsApp पर होता है। बस "Hi" भेजो — बाकी सब automatic।</div>
+    </div>
+    <div class="fq">
+      <div class="fq-q" onclick="toggleFaq(this)">🛑 काम नहीं करना तो क्या करें? <span class="arr">▼</span></div>
+      <div class="fq-a">WhatsApp menu में "❌ अभी उपलब्ध नहीं" दबाएं — तुरंत बंद हो जाएगा।</div>
+    </div>
+  </div>
+</div>
+
+<!-- SUPPORT -->
+<div class="sec" style="margin-top:24px;">
+  <div class="support-box">
+    <div class="support-title">🆘 कोई शिकायत या सुझाव?</div>
+    <p class="support-text">कुछ गड़बड़ लगे या सुझाव देना हो — बेझिझक बताएं।</p>
+    <a href="https://wa.me/919575859395?text=Hi%20मुझे%20शिकायत%20सुझाव%20देना%20है" class="support-btn">💬 शिकायत/सुझाव भेजें</a>
+  </div>
+</div>
+
+<div class="fine">
+  <p><strong>🔞 आयु सीमा:</strong> केवल 18+ वयस्कों के लिए।</p>
+  <p><strong>ℹ️ ध्यान दें:</strong> X Worker आपको जोड़ने का काम करता है। काम शुरू करने से पहले पैसे और समय की बात साफ कर लें — ज़्यादातर मामले इसी से सुलझ जाते हैं।</p>
+  <p style="margin-top:8px;color:#333;">&copy; 2026 X Worker | मध्य प्रदेश | MSME: UDYAM-MP-29-0021465</p>
+</div>
+
+<!-- STICKY WA -->
+<div class="wa-sticky">
+  <a href="https://wa.me/919575859395?text=Hi%20मुझे%20काम%20चाहिए" class="wa-main" target="_blank" rel="noopener">
+    <svg class="wa-logo" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#075E54"/><path d="M34.5 13.5C32.1 11.1 28.9 9.8 25.5 9.8C18.5 9.8 12.8 15.5 12.8 22.5C12.8 24.8 13.4 27 14.5 28.9L12.7 35.5L19.5 33.7C21.3 34.7 23.4 35.3 25.5 35.3C32.5 35.3 38.2 29.6 38.2 22.6C38.2 19.2 36.9 16 34.5 13.5ZM25.5 33.1C23.6 33.1 21.8 32.6 20.2 31.6L19.8 31.4L15.8 32.4L16.8 28.5L16.6 28.1C15.5 26.4 14.9 24.5 14.9 22.5C14.9 16.7 19.7 11.9 25.5 11.9C28.3 11.9 30.9 13 32.9 14.9C34.9 16.9 36 19.6 36 22.5C36 28.4 31.3 33.1 25.5 33.1ZM31.3 25.3C31 25.1 29.5 24.4 29.2 24.3C28.9 24.2 28.7 24.1 28.5 24.4C28.3 24.7 27.8 25.3 27.6 25.5C27.4 25.7 27.3 25.8 27 25.6C26.7 25.4 25.7 25.1 24.6 24.1C23.7 23.3 23.1 22.3 22.9 22C22.7 21.7 22.9 21.5 23.1 21.3C23.3 21.1 23.5 20.9 23.7 20.7C23.9 20.5 23.9 20.3 24 20.1C24.1 19.9 24.1 19.7 24 19.5C23.9 19.3 23.3 17.8 23 17.2C22.8 16.6 22.5 16.7 22.3 16.7H21.8C21.6 16.7 21.3 16.8 21 17.1C20.7 17.4 19.9 18.1 19.9 19.6C19.9 21.1 21 22.5 21.2 22.7C21.4 22.9 23.1 25.6 25.8 26.9C26.4 27.2 26.9 27.4 27.3 27.5C27.9 27.7 28.5 27.7 28.9 27.6C29.4 27.5 30.4 26.9 30.7 26.2C31 25.6 31 25 30.9 24.9L31.3 25.3Z" fill="white"/></svg>
+    <div class="wa-txt">
+      <strong>👉 काम ढूंढना है? यहाँ दबाएं</strong>
+      <span>WhatsApp पर "Hi" भेजें — Free में शुरू</span>
+    </div>
+    <span class="wa-arr">›</span>
+  </a>
+</div>
+
+<div class="toast" id="toast">✓ Pincode copy हो गया!</div>
+
+<script>
+const HINDI = {"Agar Malwa":"अगर मालवा","Alirajpur":"अलीराजपुर","Anuppur":"अनूपपुर","Ashoknagar":"अशोकनगर","Balaghat":"बालाघाट","Barwani":"बड़वानी","Betul":"बैतूल","Bhind":"भिंड","Bhopal":"भोपाल","Burhanpur":"बुरहानपुर","Chhatarpur":"छतरपुर","Chhindwara":"छिंदवाड़ा","Damoh":"दमोह","Datia":"दतिया","Dewas":"देवास","Dhar":"धार","Dindori":"डिंडोरी","Guna":"गुना","Gwalior":"ग्वालियर","Harda":"हरदा","Indore":"इंदौर","Jabalpur":"जबलपुर","Jhabua":"झाबुआ","Katni":"कटनी","Khandwa":"खंडवा","Khargone":"खरगोन","Maihar":"मैहर","Mandla":"मंडला","Mandsaur":"मंदसौर","Mauganj":"मऊगंज","Morena":"मुरैना","Narmadapuram":"नर्मदापुरम","Narsinghpur":"नरसिंहपुर","Neemuch":"नीमच","Niwari":"निवाड़ी","Pandhurna":"पांढुर्णा","Panna":"पन्ना","Raisen":"रायसेन","Rajgarh":"राजगढ़","Ratlam":"रतलाम","Rewa":"रीवा","Sagar":"सागर","Satna":"सतना","Sehore":"सीहोर","Seoni":"सिवनी","Shahdol":"शहडोल","Shajapur":"शाजापुर","Sheopur":"श्योपुर","Shivpuri":"शिवपुरी","Sidhi":"सीधी","Singrauli":"सिंगरौली","Tikamgarh":"टीकमगढ़","Ujjain":"उज्जैन","Umaria":"उमरिया","Vidisha":"विदिशा"};
+
+const DISTRICTS = {"Agar Malwa":[{"po":"Agar Malwa","pin":"465441"},{"po":"Barod","pin":"465550"},{"po":"Kanad","pin":"465230"},{"po":"Nalkheda","pin":"465445"},{"po":"Soyatkalan","pin":"465449"},{"po":"Susner","pin":"465447"}],"Alirajpur":[{"po":"Alirajpur","pin":"457887"},{"po":"Bhabhra","pin":"457882"},{"po":"Jobat","pin":"457990"},{"po":"Katthiwada","pin":"457885"},{"po":"Sondawa","pin":"457888"}],"Anuppur":[{"po":"Amadand","pin":"484447"},{"po":"Amarkantak","pin":"484886"},{"po":"Anuppur","pin":"484224"},{"po":"Chandia","pin":"484660"},{"po":"Jaithari","pin":"484330"},{"po":"Kotma","pin":"484334"},{"po":"Rajendragram","pin":"484881"},{"po":"Venkatnagar","pin":"484113"}],"Ashoknagar":[{"po":"Ashoknagar","pin":"473331"},{"po":"Chanderi","pin":"473446"},{"po":"Esagarh","pin":"473335"},{"po":"Mungaoli","pin":"473443"},{"po":"Naisarai","pin":"473332"},{"po":"Shadora","pin":"473330"}],"Balaghat":[{"po":"Balaghat","pin":"481001"},{"po":"Baihar","pin":"481111"},{"po":"Birsa","pin":"481051"},{"po":"Bharveli","pin":"481102"},{"po":"Budbuda","pin":"481332"},{"po":"Garhi","pin":"481117"},{"po":"Hatta","pin":"481226"},{"po":"Karanja","pin":"481224"},{"po":"Katangi","pin":"481445"},{"po":"Khairlanji","pin":"481337"},{"po":"Kirnapur","pin":"481115"},{"po":"Lalburra","pin":"481441"},{"po":"Lamta","pin":"481551"},{"po":"Lanji","pin":"481222"},{"po":"Malanjkhand","pin":"481116"},{"po":"Paraswada","pin":"481556"},{"po":"Rampaily","pin":"481335"},{"po":"Tirodi","pin":"481449"},{"po":"Ukwa","pin":"481105"},{"po":"Waraseoni","pin":"481331"}],"Barwani":[{"po":"Anjad","pin":"451556"},{"po":"Barwani","pin":"451551"},{"po":"Khetia","pin":"451881"},{"po":"Julwaniya","pin":"451449"},{"po":"Pansemal","pin":"451770"},{"po":"Rajpur","pin":"451447"},{"po":"Sendhwa","pin":"451666"},{"po":"Thikari","pin":"451660"}],"Betul":[{"po":"Betul","pin":"460001"},{"po":"Bhaisdenhi","pin":"460220"},{"po":"Chicholi","pin":"460330"},{"po":"Ghodadongri","pin":"460443"},{"po":"Pathakheda","pin":"460449"},{"po":"Sarni","pin":"460447"},{"po":"Shahpur","pin":"460440"},{"po":"Amla","pin":"460551"},{"po":"Athnair","pin":"460110"},{"po":"Bordehi","pin":"460554"},{"po":"Multai","pin":"460661"},{"po":"Prabhatpattan","pin":"460665"}],"Bhind":[{"po":"Akoda","pin":"477332"},{"po":"Attair","pin":"477111"},{"po":"Bhind","pin":"477001"},{"po":"Phoop","pin":"477555"},{"po":"Alampur","pin":"477449"},{"po":"Aswar","pin":"477446"},{"po":"Daboh","pin":"477447"},{"po":"Lahar","pin":"477445"},{"po":"Raun","pin":"477335"},{"po":"Sagra","pin":"477333"},{"po":"Umari","pin":"477331"},{"po":"Amayan","pin":"477227"},{"po":"Gohad","pin":"477116"},{"po":"Gormi","pin":"477660"},{"po":"Malanpur","pin":"477117"},{"po":"Mau","pin":"477222"},{"po":"Mehgaon","pin":"477557"},{"po":"Mihona","pin":"477441"}],"Bhopal":[{"po":"Bhopal","pin":"462001"},{"po":"Bairagarh","pin":"462030"},{"po":"Berasia","pin":"463106"},{"po":"Govindpura","pin":"462023"},{"po":"Misrod","pin":"462047"}],"Burhanpur":[{"po":"Burhanpur","pin":"450331"},{"po":"Nepanagar","pin":"450221"},{"po":"Shahpur","pin":"450445"},{"po":"Khaknar","pin":"450332"}],"Chhatarpur":[{"po":"Bamitha","pin":"471105"},{"po":"Bijawar","pin":"471405"},{"po":"Buxwaha","pin":"471318"},{"po":"Chhatarpur","pin":"471001"},{"po":"Chandla","pin":"471525"},{"po":"Garhimalehra","pin":"471411"},{"po":"Ghaura","pin":"471313"},{"po":"Harpalpur","pin":"471111"},{"po":"Khajuraho","pin":"471606"},{"po":"Nowgong","pin":"471201"},{"po":"Rajnagar","pin":"471625"}],"Chhindwara":[{"po":"Chhindwara","pin":"480001"},{"po":"Damua","pin":"480555"},{"po":"Junnardeo","pin":"480551"},{"po":"Parasia","pin":"480441"},{"po":"Tamia","pin":"480559"},{"po":"Amarwara","pin":"480221"},{"po":"Chand","pin":"480110"},{"po":"Chaurai","pin":"480115"},{"po":"Harrai","pin":"480224"},{"po":"Pandhurna","pin":"480334"},{"po":"Sausar","pin":"480106"},{"po":"Teegaon","pin":"480338"}],"Damoh":[{"po":"Batiagarh","pin":"470673"},{"po":"Damoh","pin":"470661"},{"po":"Hatta","pin":"470775"},{"po":"Jabera","pin":"470881"},{"po":"Patera","pin":"470772"},{"po":"Patharia","pin":"470666"},{"po":"Tendukheda","pin":"470880"}],"Datia":[{"po":"Datia","pin":"475661"},{"po":"Bhandair","pin":"475335"},{"po":"Indergarh","pin":"475675"},{"po":"Seondha","pin":"475682"},{"po":"Sonagir","pin":"475685"},{"po":"Tharet","pin":"475673"},{"po":"Unao","pin":"475671"}],"Dewas":[{"po":"Dewas","pin":"455001"},{"po":"Bagli","pin":"455227"},{"po":"Hatpiplia","pin":"455223"},{"po":"Kannod","pin":"455332"},{"po":"Khategaon","pin":"455336"},{"po":"Satwas","pin":"455459"},{"po":"Sonkatch","pin":"455118"}],"Dhar":[{"po":"Dhar","pin":"454001"},{"po":"Amjhera","pin":"454441"},{"po":"Badnawar","pin":"454660"},{"po":"Bagh","pin":"454221"},{"po":"Dhamnod","pin":"454552"},{"po":"Dharampuri","pin":"454449"},{"po":"Kukshi","pin":"454331"},{"po":"Manawar","pin":"454446"},{"po":"Mandu","pin":"454010"},{"po":"Pithampur","pin":"454774"}],"Dindori":[{"po":"Dindori","pin":"481880"},{"po":"Bajag","pin":"481883"},{"po":"Gadasarai","pin":"481882"},{"po":"Gorakhpur","pin":"481884"},{"po":"Samnapur","pin":"481778"},{"po":"Shahpur","pin":"481879"}],"Guna":[{"po":"Guna","pin":"473001"},{"po":"Aroun","pin":"473101"},{"po":"Bamori","pin":"473105"},{"po":"Binaganj","pin":"473115"},{"po":"Chachauda","pin":"473118"},{"po":"Kumbhraj","pin":"473222"},{"po":"Raghogarh","pin":"473226"}],"Gwalior":[{"po":"Gwalior","pin":"474001"},{"po":"Bhitarwar","pin":"475220"},{"po":"Dabra","pin":"475110"},{"po":"Mohna","pin":"475330"}],"Harda":[{"po":"Harda","pin":"461331"},{"po":"Khirkiyan","pin":"461441"},{"po":"Timarni","pin":"461228"}],"Indore":[{"po":"Indore","pin":"452001"},{"po":"Betma","pin":"453001"},{"po":"Depalpur","pin":"453115"},{"po":"Mhow","pin":"453441"},{"po":"Sanwer","pin":"453551"}],"Jabalpur":[{"po":"Jabalpur","pin":"482001"},{"po":"Barela","pin":"483001"},{"po":"Bargi","pin":"482051"},{"po":"Bheraghat","pin":"483053"},{"po":"Kundam","pin":"483110"},{"po":"Katangi","pin":"483105"},{"po":"Panagar","pin":"483220"},{"po":"Patan","pin":"483113"},{"po":"Sihora","pin":"483225"},{"po":"Shahpura","pin":"483119"}],"Jhabua":[{"po":"Jhabua","pin":"457661"},{"po":"Meghnagar","pin":"457779"},{"po":"Petlawad","pin":"457773"},{"po":"Thandla","pin":"457777"}],"Katni":[{"po":"Katni","pin":"483501"},{"po":"Bahoriband","pin":"483330"},{"po":"Barhi","pin":"483770"},{"po":"Kymore","pin":"483880"},{"po":"Rithi","pin":"483990"},{"po":"Sleemnabad","pin":"483440"},{"po":"Vijayraghavgarh","pin":"483775"}],"Khandwa":[{"po":"Khandwa","pin":"450001"},{"po":"Harsud","pin":"450116"},{"po":"Khalwa","pin":"450117"},{"po":"Mandhata Omkareshwar","pin":"450554"},{"po":"Mundi","pin":"450112"},{"po":"Pandhana","pin":"450661"}],"Khargone":[{"po":"Khargone","pin":"451001"},{"po":"Barwaha","pin":"451115"},{"po":"Bhikangaon","pin":"451331"},{"po":"Kasrawad","pin":"451228"},{"po":"Maheshwar","pin":"451224"},{"po":"Mandleshwar","pin":"451221"},{"po":"Sanawad","pin":"451111"}],"Maihar":[{"po":"Maihar","pin":"485771"}],"Mandla":[{"po":"Mandla","pin":"481661"},{"po":"Anjania","pin":"481998"},{"po":"Bamni","pin":"481771"},{"po":"Bijadandi","pin":"481666"},{"po":"Chiraidongri","pin":"481678"},{"po":"Ghughri","pin":"481664"},{"po":"Maharajpur","pin":"481665"},{"po":"Mohgaon","pin":"481663"},{"po":"Nainpur","pin":"481776"},{"po":"Niwas","pin":"481885"},{"po":"Pindrai","pin":"481668"},{"po":"Sijora","pin":"481996"}],"Mandsaur":[{"po":"Mandsaur","pin":"458001"},{"po":"Bhanpura","pin":"458775"},{"po":"Dalauda","pin":"458667"},{"po":"Garoth","pin":"458880"},{"po":"Nahargarh","pin":"458558"},{"po":"Shamgarh","pin":"458883"},{"po":"Sitamau","pin":"458990"},{"po":"Malhargarh","pin":"458339"}],"Mauganj":[{"po":"Mauganj","pin":"486331"}],"Morena":[{"po":"Morena","pin":"476001"},{"po":"Ambah","pin":"476111"},{"po":"Dimni","pin":"476134"},{"po":"Joura","pin":"476221"},{"po":"Kailaras","pin":"476224"},{"po":"Pahargarh","pin":"476228"}],"Narmadapuram":[{"po":"Hoshangabad","pin":"461001"},{"po":"Babai","pin":"461661"},{"po":"Itarsi","pin":"461111"},{"po":"Pachmarhi","pin":"461881"},{"po":"Piparia","pin":"461775"},{"po":"Seoni Malwa","pin":"461223"},{"po":"Sohagpur","pin":"461771"}],"Narsinghpur":[{"po":"Narsinghpur","pin":"487001"},{"po":"Chichli","pin":"487770"},{"po":"Gadarwara","pin":"487551"},{"po":"Gotegaon","pin":"487118"},{"po":"Kareli","pin":"487221"},{"po":"Saikheda","pin":"487661"}],"Neemuch":[{"po":"Neemuch","pin":"458441"},{"po":"Jawad","pin":"458330"},{"po":"Kukdeshwar","pin":"458116"},{"po":"Manasa","pin":"458110"},{"po":"Rampura","pin":"458118"},{"po":"Singoli","pin":"458228"}],"Niwari":[{"po":"Niwari","pin":"472442"},{"po":"Jeron","pin":"472337"},{"po":"Orchha","pin":"472246"},{"po":"Prithvipur","pin":"472336"}],"Pandhurna":[{"po":"Pandhurna","pin":"480334"}],"Panna":[{"po":"Panna","pin":"488001"},{"po":"Ajaigarh","pin":"488220"},{"po":"Amanganj","pin":"488441"},{"po":"Pawai","pin":"488446"},{"po":"Shahnagar","pin":"488448"}],"Raisen":[{"po":"Raisen","pin":"464551"},{"po":"Mandideep","pin":"462046"},{"po":"Sanchi","pin":"464661"},{"po":"Begumganj","pin":"464881"},{"po":"Obedullaganj","pin":"464993"},{"po":"Silwani","pin":"464886"},{"po":"Udaipura","pin":"464770"}],"Rajgarh":[{"po":"Rajgarh","pin":"465661"},{"po":"Biaora","pin":"465674"},{"po":"Khilchipur","pin":"465679"},{"po":"Narsinghgarh","pin":"465669"},{"po":"Sarangpur","pin":"465697"}],"Ratlam":[{"po":"Ratlam","pin":"457001"},{"po":"Alote","pin":"457114"},{"po":"Jaora","pin":"457226"},{"po":"Sailana","pin":"457550"}],"Rewa":[{"po":"Rewa","pin":"486001"},{"po":"Amarpatan","pin":"485775"},{"po":"Mauganj","pin":"486331"},{"po":"Sirmour","pin":"486448"},{"po":"Teonthar","pin":"486220"},{"po":"Unchehara","pin":"485661"}],"Sagar":[{"po":"Sagar","pin":"470001"},{"po":"Bina","pin":"470113"},{"po":"Damoh","pin":"470661"},{"po":"Garahkota","pin":"470229"},{"po":"Kesli","pin":"470235"},{"po":"Khurai","pin":"470117"},{"po":"Rahatgarh","pin":"470119"},{"po":"Rehli","pin":"470227"},{"po":"Shahgarh","pin":"470339"}],"Satna":[{"po":"Satna","pin":"485001"},{"po":"Maihar","pin":"485771"},{"po":"Nagod","pin":"485446"},{"po":"Ramnagar","pin":"485881"},{"po":"Sohawal","pin":"485441"}],"Sehore":[{"po":"Sehore","pin":"466001"},{"po":"Ashta","pin":"466116"},{"po":"Ichhawar","pin":"466115"},{"po":"Nasrullaganj","pin":"466331"},{"po":"Rehti","pin":"466446"},{"po":"Budni","pin":"466445"}],"Seoni":[{"po":"Seoni","pin":"480661"},{"po":"Barghat","pin":"480667"},{"po":"Chhapara","pin":"480884"},{"po":"Ghansore","pin":"480997"},{"po":"Keolari","pin":"480994"},{"po":"Lakhnadon","pin":"480886"}],"Shahdol":[{"po":"Shahdol","pin":"484001"},{"po":"Amlai","pin":"484116"},{"po":"Beohari","pin":"484774"},{"po":"Birsinghpur Pali","pin":"484551"},{"po":"Burhar","pin":"484110"},{"po":"Jaisinghnagar","pin":"484771"}],"Shajapur":[{"po":"Shajapur","pin":"465001"},{"po":"Berchha","pin":"465110"},{"po":"Kalapipal","pin":"465337"},{"po":"Maksi","pin":"465106"},{"po":"Shujalpur","pin":"465333"}],"Sheopur":[{"po":"Sheopur","pin":"476337"},{"po":"Karahal","pin":"476355"},{"po":"Sabalgarh","pin":"476229"}],"Shivpuri":[{"po":"Shivpuri","pin":"473551"},{"po":"Badarwas","pin":"473885"},{"po":"Dinara","pin":"473665"},{"po":"Karera","pin":"473660"},{"po":"Kolaras","pin":"473770"},{"po":"Narwar","pin":"473880"}],"Sidhi":[{"po":"Sidhi","pin":"486661"},{"po":"Churhat","pin":"486771"},{"po":"Majhaulli","pin":"486666"},{"po":"Sihawal","pin":"486670"},{"po":"Rampur Naikin","pin":"486775"}],"Singrauli":[{"po":"Singrauli","pin":"486889"},{"po":"Chitrangi","pin":"486882"},{"po":"Waidhan","pin":"486886"}],"Tikamgarh":[{"po":"Tikamgarh","pin":"472001"},{"po":"Baldeogarh","pin":"472111"},{"po":"Jatara","pin":"472118"},{"po":"Khargapur","pin":"472115"}],"Ujjain":[{"po":"Ujjain","pin":"456001"},{"po":"Barnagar","pin":"456771"},{"po":"Ghattia","pin":"456550"},{"po":"Khachroud","pin":"456224"},{"po":"Mahidpur","pin":"456443"},{"po":"Nagda","pin":"456335"},{"po":"Tarana","pin":"456665"}],"Umaria":[{"po":"Umaria","pin":"484661"},{"po":"Manpur","pin":"484665"},{"po":"Nowrozabad","pin":"484555"}],"Vidisha":[{"po":"Vidisha","pin":"464001"},{"po":"Basoda","pin":"464221"},{"po":"Gyraspur","pin":"464331"},{"po":"Kurwai","pin":"464224"},{"po":"Sironj","pin":"464228"}]};
+
+let active = null;
+
+// Build district grid
+const dGrid = document.getElementById('dGrid');
+Object.keys(DISTRICTS).forEach(d => {
+  const btn = document.createElement('button');
+  btn.className = 'd-btn';
+  btn.textContent = HINDI[d] || d;
+  btn.dataset.key = d;
+  btn.onclick = () => selectDist(d);
+  dGrid.appendChild(btn);
+});
+
+function selectDist(d) {
+  active = d;
+  document.querySelectorAll('.d-btn').forEach(b => b.classList.toggle('act', b.dataset.key === d));
+  document.getElementById('selName').textContent = HINDI[d] || d;
+  document.getElementById('aSearch').value = '';
+  document.getElementById('areaSec').classList.add('vis');
+  document.getElementById('areaSec').scrollIntoView({behavior:'smooth',block:'nearest'});
+  renderAreas('');
+}
+
+function resetDist() {
+  active = null;
+  document.querySelectorAll('.d-btn').forEach(b => b.classList.remove('act'));
+  document.getElementById('areaSec').classList.remove('vis');
+}
+
+function renderAreas(q) {
+  if (!active) return;
+  const entries = DISTRICTS[active] || [];
+  const filtered = q ? entries.filter(e => e.po.toLowerCase().includes(q) || e.pin.includes(q)) : entries;
+  document.getElementById('aCount').textContent = filtered.length + ' एरिया मिले';
+  const list = document.getElementById('aList');
+  if (!filtered.length) {
+    list.innerHTML = '<div style="text-align:center;padding:16px;color:#444;font-size:13px;">कोई एरिया नहीं मिला</div>';
+    return;
+  }
+  list.innerHTML = filtered.map(e => `
+    <div class="a-card">
+      <div class="a-info">
+        <div class="a-name">${e.po}</div>
+        <div class="a-dist">📍 ${HINDI[active] || active}</div>
+      </div>
+      <div class="a-pin">${e.pin}</div>
+      <button class="copy-btn" onclick="copyPin('${e.pin}',this)">📋 Copy</button>
+    </div>
+  `).join('');
+}
+
+document.getElementById('aSearch').addEventListener('input', function() {
+  renderAreas(this.value.toLowerCase().trim());
+});
+
+function copyPin(pin, btn) {
+  navigator.clipboard.writeText(pin).then(() => {
+    btn.classList.add('done'); btn.textContent = '✓ Done';
+    showToast();
+    setTimeout(() => { btn.classList.remove('done'); btn.textContent = '📋 Copy'; }, 2000);
+  }).catch(() => {
+    const el = document.createElement('textarea');
+    el.value = pin; document.body.appendChild(el); el.select();
+    document.execCommand('copy'); document.body.removeChild(el);
+    showToast();
+  });
+}
+
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+function toggleFaq(el) {
+  el.closest('.fq').classList.toggle('open');
+}
+</script>
+</body>
+</html>
